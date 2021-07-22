@@ -65,14 +65,14 @@ const { expect, describe, test } = require("@jest/globals")
 // --------------------2) Create a function that takes in an array of words and returns an array with all the words capitalized.
 
 // a) Create a test with expect statements for each of the variables provided.
-describe("capitalizeFirst", () => {
-    test("returns an array with all the words capitalized", () => {
-        var randomNouns1 = ["streetlamp", "potato", "teeth", "conclusion", "nephew"]
-        var randomNouns2 = ["temperature", "database", "chopsticks", "mango", "deduction"]
-        expect(capitalizeFirst(randomNouns1)).toEqual("streetlamp", "potato", "teeth", "conclusion", "nephew")
-        expect(capitalizeFirst(randomNouns2)).toEqual("temperature", "database", "chopstick", "mango", "deduction")
-    })
-})
+// describe("capitalizeFirst", () => {
+//     test("returns an array with all the words capitalized", () => {
+//         var randomNouns1 = ["streetlamp", "potato", "teeth", "conclusion", "nephew"]
+//         var randomNouns2 = ["temperature", "database", "chopstick", "mango", "deduction"]
+//         expect(capitalizeFirst(randomNouns1)).toEqual(["Streetlamp", "Potato", "Teeth", "Conclusion", "Nephew"])
+//         expect(capitalizeFirst(randomNouns2)).toEqual(["Temperature", "Database", "Chopstick", "Mango", "Deduction"])
+//     })
+// })
 
 
 // var randomNouns1 = ["streetlamp", "potato", "teeth", "conclusion", "nephew"]
@@ -84,11 +84,11 @@ describe("capitalizeFirst", () => {
 
 
 // b) Create the function that makes the test pass.
-const capitalizeFirst = (array) => {
-for(var i = 0; i < array.length; i++){
-    array[i] = array[i].toUpperCase(i);
-}
-}
+// const capitalizeFirst = (array) => {
+//     return array.map(value => {
+//      return value[0].toUpperCase() + value.slice(1)
+//     })
+// }
 
 // i feel like i am almost there for question 2 but i don't know what else i was missing i even try console.log and it wouldn't work hahaha but it's all good i try my best for this one and it was a hell of a battle.
 
@@ -118,3 +118,10 @@ describe("firstVowel", () => {
 // b) Create the function that makes the test pass.
 
 // for question 3 it was a tricky one i couldn't figure out a function to do this.
+const firstVowel = (string) =>{
+    const vowels = ["a", "e", "i", "o", "u"]
+    for(let i = 0; i < string.length; i++){
+        if(vowels.includes(string[i]))
+        return i
+    }
+}
